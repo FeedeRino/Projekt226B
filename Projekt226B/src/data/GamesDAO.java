@@ -2,8 +2,10 @@ package data;
 
 import java.util.ArrayList;
 
+import dto.Game;
+
 public interface GamesDAO {
 
-	ArrayList<Integer> list();
+	ArrayList<Game> list();
 
 }
