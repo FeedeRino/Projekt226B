@@ -1,9 +1,11 @@
 package logic;
 
-public class startExe {
+import dto.Game;
 
-	protected void startGame() {
+public class startExe extends Starter {
 
+	protected startExe(Game game) {
+		super(game);
 	}
 
 }

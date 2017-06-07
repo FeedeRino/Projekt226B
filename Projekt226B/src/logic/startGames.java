@@ -11,12 +11,14 @@ public class startGames {
 	
 	private startGames(Game starterGame){
 		
+		if(starterGame.getStartauswahl() == true) {
+			
+		}			
 	}
 	private ArrayList<Integer> getAllGames(){
 		
 		return AllGames;
 	}
-	
 	
 
 }

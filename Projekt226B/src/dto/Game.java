@@ -58,7 +58,7 @@ public class Game {
 		Pfad = pfad;
 	}
 
-	public boolean isStartauswahl() {
+	public boolean getStartauswahl() {
 		return Startauswahl;
 	}
 
