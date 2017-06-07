@@ -1,6 +1,6 @@
 package logic;
 
-public class startExe {
+public class startBrowser {
 
 	protected void startGame() {
 
