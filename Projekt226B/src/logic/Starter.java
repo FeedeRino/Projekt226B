@@ -12,4 +12,8 @@ public class Starter {
 		
 	}
 
+	public Game getGame() {
+		return game;
+	}
+
 }
