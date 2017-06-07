@@ -1,5 +1,10 @@
 package logic;
 
+import java.util.ArrayList;
+
+import data.GamesDAO;
+import dto.Game;
+
 public class startGames {
 	
 	private GamesDAO dataGames;
@@ -7,9 +12,9 @@ public class startGames {
 	private startGames(Game starterGame){
 		
 	}
-	private getAllGames(){
+	private ArrayList<Integer> getAllGames(){
 		
-		return AllGames
+		return AllGames;
 	}
 	
 	
