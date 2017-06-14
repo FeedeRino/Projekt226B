@@ -19,15 +19,13 @@ public class startBrowser extends Starter {
 	            try {
 	                desktop.browse(new URI(url));
 	            } catch (IOException | URISyntaxException e) {
-	                // TODO Auto-generated catch block
 	                e.printStackTrace();
 	            }
 	        }else{
 	            Runtime runtime = Runtime.getRuntime();
 	            try {
-	                runtime.exec("xdg-open " + url);
+	                runtime.exec("Open " + url);
 	            } catch (IOException e) {
-	                // TODO Auto-generated catch block
 	                e.printStackTrace();
 	            }
 	        }
