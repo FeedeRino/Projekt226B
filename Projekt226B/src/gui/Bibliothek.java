@@ -228,6 +228,7 @@ public class Bibliothek extends JFrame implements ActionListener {
 			Game g1 = ag.get(0);
 			sg.startGame(g1);
 
+
 		}
 
 	}
