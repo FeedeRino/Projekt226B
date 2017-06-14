@@ -22,6 +22,7 @@ import java.awt.Insets;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.awt.event.ActionEvent;
+import java.awt.FlowLayout;
 
 public class Bibliothek extends JFrame implements ActionListener {
 
@@ -78,6 +79,11 @@ public class Bibliothek extends JFrame implements ActionListener {
 		JLabel lblGame = new JLabel("Bibliothek");
 		lblGame.setFont(new Font("Tahoma", Font.PLAIN, 32));
 		main_n.add(lblGame);
+		
+		JPanel panel_4 = new JPanel();
+		main.add(panel_4, BorderLayout.CENTER);
+		panel_4.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+		
 
 		JPanel main_c = new JPanel();
 		main.add(main_c, BorderLayout.CENTER);
