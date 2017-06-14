@@ -23,7 +23,7 @@ public class GamePanel extends JPanel {
 		this.g = g;
 		this.setLayout(new GridLayout(3,1));
 		if(this.g != null) {
-			titel.setText(this.g.getTitel());
+			titel.setText(this.g.getTitel()); 
 		}
 		this.add(titel);
 		this.add(start);
