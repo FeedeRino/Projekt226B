@@ -36,7 +36,7 @@ public class Bibliothek extends JFrame implements ActionListener {
 	JButton button_1;
 	JButton button_3;
 	JButton button_5;
-	
+
 	startGames sg;
 
 	/**
@@ -175,6 +175,8 @@ public class Bibliothek extends JFrame implements ActionListener {
 		main_c.add(button_1, gbc_button_1);
 
 		button_3 = new JButton("Details");
+
+		JButton button_3 = new JButton("Details");
 		GridBagConstraints gbc_button_3 = new GridBagConstraints();
 		gbc_button_3.insets = new Insets(0, 0, 5, 5);
 		gbc_button_3.gridx = 10;
@@ -215,17 +217,17 @@ public class Bibliothek extends JFrame implements ActionListener {
 		button_1.addActionListener(this);
 		button_3.addActionListener(this);
 		button_5.addActionListener(this);
-	
+
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == this.btnStart) {
 			sg = new startGames();
-			ArrayList<Game> ag= sg.getAllGames();
+			ArrayList<Game> ag = sg.getAllGames();
 			Game g1 = ag.get(0);
 			sg.startGame(g1);
-			
+
 		}
 
 	}
