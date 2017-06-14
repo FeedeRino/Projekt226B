@@ -32,6 +32,8 @@ public class Bibliothek extends JFrame implements ActionListener {
 	startGames sg = new startGames();
 	ArrayList<Game> ag = sg.getAllGames();
 
+	GamePanel gp;
+
 	/**
 	 * Launch the application.
 	 */
@@ -71,7 +73,7 @@ public class Bibliothek extends JFrame implements ActionListener {
 		JLabel lblGame = new JLabel("Bibliothek");
 		lblGame.setFont(new Font("Tahoma", Font.PLAIN, 32));
 		main_n.add(lblGame);
-		
+
 		JPanel panel_4 = new JPanel();
 		main.add(panel_4, BorderLayout.CENTER);
 		panel_4.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
@@ -90,16 +92,33 @@ public class Bibliothek extends JFrame implements ActionListener {
 		JPanel panel_3 = new JPanel();
 		contentPane.add(panel_3, BorderLayout.SOUTH);
 
-		for(Game g : ag) {
-			GamePanel gp = new GamePanel(g);
+		for (Game g : ag) {
+			gp = new GamePanel(g);
 			panel_4.add(gp);
 		}
-		
+
+		gp.start.addActionListener(this);
+
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == gp.start) {
 
+			try {
+				sg.startGame(ag.get(0));
+			} catch (Exception e1) {
+				e1.printStackTrace();
+			}
+		}
+		if (e.getSource() == gp.start) {
+
+			try {
+				sg.startGame(ag.get(1));
+			} catch (Exception e1) {
+				e1.printStackTrace();
+			}
+		}
 	}
 
 }
