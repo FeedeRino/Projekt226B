@@ -3,11 +3,12 @@ package logic;
 import java.util.ArrayList;
 
 import data.GamesDAO;
+import data.GamesData;
 import dto.Game;
 
 public class startGames {
 
-	private GamesDAO dataGames;
+	private GamesDAO dataGames = new GamesData();
 
 	public void startGame(Game starterGame) throws Exception {
 
