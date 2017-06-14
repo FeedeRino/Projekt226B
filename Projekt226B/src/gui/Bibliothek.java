@@ -232,7 +232,12 @@ public class Bibliothek extends JFrame implements ActionListener {
 			sg = new startGames();
 			ArrayList<Game> ag = sg.getAllGames();
 			Game g1 = ag.get(0);
-			sg.startGame(g1);
+			try {
+				sg.startGame(g1);
+			} catch (Exception e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
 
 
 		}
