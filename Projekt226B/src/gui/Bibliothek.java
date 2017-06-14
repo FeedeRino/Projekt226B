@@ -11,6 +11,12 @@ import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.SwingConstants;
 import java.awt.Color;
+import javax.swing.JButton;
+import java.awt.GridBagLayout;
+import java.awt.GridBagConstraints;
+import java.awt.Insets;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Bibliothek extends JFrame {
 
@@ -51,57 +57,134 @@ public class Bibliothek extends JFrame {
 		main.add(main_n, BorderLayout.NORTH);
 		main_n.setLayout(new GridLayout(1, 0, 0, 0));
 		
-		JLabel lblGame = new JLabel("Game Titel");
+		JLabel lblGame = new JLabel("Bibliothek");
 		lblGame.setFont(new Font("Tahoma", Font.PLAIN, 32));
 		main_n.add(lblGame);
 		
-		JPanel main_w = new JPanel();
-		main.add(main_w, BorderLayout.WEST);
-		main_w.setLayout(new GridLayout(0, 1, 0, 0));
-		
-		JLabel lblNewLabel = new JLabel("                                         ");
-		main_w.add(lblNewLabel);
-		
-		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setBackground(new Color(240, 240, 240));
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 30));
-		main_w.add(lblNewLabel_1);
-		
-		JLabel lblNewLabel_2 = new JLabel("");
-		main_w.add(lblNewLabel_2);
-		
 		JPanel main_c = new JPanel();
 		main.add(main_c, BorderLayout.CENTER);
-		main_c.setLayout(new BorderLayout(0, 0));
+		GridBagLayout gbl_main_c = new GridBagLayout();
+		gbl_main_c.columnWidths = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+		gbl_main_c.rowHeights = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+		gbl_main_c.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+		gbl_main_c.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
+		main_c.setLayout(gbl_main_c);
 		
-		JLabel Beschreibung = new JLabel("Beschreibung");
-		Beschreibung.setHorizontalAlignment(SwingConstants.CENTER);
-		Beschreibung.setFont(new Font("Tahoma", Font.PLAIN, 60));
-		main_c.add(Beschreibung);
+		JLabel lblGame_1 = new JLabel("Agar.io");
+		lblGame_1.setFont(new Font("Arial", Font.PLAIN, 20));
+		GridBagConstraints gbc_lblGame_1 = new GridBagConstraints();
+		gbc_lblGame_1.insets = new Insets(0, 0, 5, 5);
+		gbc_lblGame_1.gridheight = 2;
+		gbc_lblGame_1.gridx = 2;
+		gbc_lblGame_1.gridy = 1;
+		main_c.add(lblGame_1, gbc_lblGame_1);
 		
-		JLabel lblNewLabel_3 = new JLabel(" ");
-		main_c.add(lblNewLabel_3, BorderLayout.NORTH);
+		JLabel lblGame_2 = new JLabel("Forge of Empires");
+		lblGame_2.setFont(new Font("Arial", Font.PLAIN, 20));
+		GridBagConstraints gbc_lblGame_2 = new GridBagConstraints();
+		gbc_lblGame_2.gridwidth = 5;
+		gbc_lblGame_2.gridheight = 2;
+		gbc_lblGame_2.insets = new Insets(0, 0, 5, 5);
+		gbc_lblGame_2.gridx = 4;
+		gbc_lblGame_2.gridy = 1;
+		main_c.add(lblGame_2, gbc_lblGame_2);
 		
-		JLabel lblNewLabel_4 = new JLabel("    ");
-		main_c.add(lblNewLabel_4, BorderLayout.WEST);
+		JLabel lblMahjong = new JLabel("Mahjong");
+		lblMahjong.setFont(new Font("Arial", Font.PLAIN, 20));
+		GridBagConstraints gbc_lblMahjong = new GridBagConstraints();
+		gbc_lblMahjong.gridheight = 2;
+		gbc_lblMahjong.insets = new Insets(0, 0, 5, 5);
+		gbc_lblMahjong.gridx = 10;
+		gbc_lblMahjong.gridy = 1;
+		main_c.add(lblMahjong, gbc_lblMahjong);
 		
-		JLabel lblNewLabel_5 = new JLabel("    ");
-		main_c.add(lblNewLabel_5, BorderLayout.EAST);
+		JLabel lblMinesweeper = new JLabel("Minesweeper");
+		lblMinesweeper.setFont(new Font("Arial", Font.PLAIN, 20));
+		GridBagConstraints gbc_lblMinesweeper = new GridBagConstraints();
+		gbc_lblMinesweeper.gridwidth = 3;
+		gbc_lblMinesweeper.gridheight = 2;
+		gbc_lblMinesweeper.insets = new Insets(0, 0, 5, 5);
+		gbc_lblMinesweeper.gridx = 12;
+		gbc_lblMinesweeper.gridy = 1;
+		main_c.add(lblMinesweeper, gbc_lblMinesweeper);
 		
-		JLabel lblNewLabel_6 = new JLabel("    ");
-		main_c.add(lblNewLabel_6, BorderLayout.SOUTH);
+		JButton btnStart = new JButton("Start");
+		GridBagConstraints gbc_btnStart = new GridBagConstraints();
+		gbc_btnStart.insets = new Insets(0, 0, 5, 5);
+		gbc_btnStart.gridx = 2;
+		gbc_btnStart.gridy = 3;
+		main_c.add(btnStart, gbc_btnStart);
+		
+		JButton btnStart_1 = new JButton("Start");
+		GridBagConstraints gbc_btnStart_1 = new GridBagConstraints();
+		gbc_btnStart_1.insets = new Insets(0, 0, 5, 5);
+		gbc_btnStart_1.gridx = 6;
+		gbc_btnStart_1.gridy = 3;
+		main_c.add(btnStart_1, gbc_btnStart_1);
+		
+		JButton btnStart_2 = new JButton("Start");
+		GridBagConstraints gbc_btnStart_2 = new GridBagConstraints();
+		gbc_btnStart_2.insets = new Insets(0, 0, 5, 5);
+		gbc_btnStart_2.gridx = 10;
+		gbc_btnStart_2.gridy = 3;
+		main_c.add(btnStart_2, gbc_btnStart_2);
+		
+		JButton btnStart_3 = new JButton("Start");
+		btnStart_3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			}
+		});
+		GridBagConstraints gbc_btnStart_3 = new GridBagConstraints();
+		gbc_btnStart_3.insets = new Insets(0, 0, 5, 5);
+		gbc_btnStart_3.gridx = 13;
+		gbc_btnStart_3.gridy = 3;
+		main_c.add(btnStart_3, gbc_btnStart_3);
+		
+		JButton btnInfo = new JButton("Info");
+		GridBagConstraints gbc_btnInfo = new GridBagConstraints();
+		gbc_btnInfo.insets = new Insets(0, 0, 5, 5);
+		gbc_btnInfo.gridx = 2;
+		gbc_btnInfo.gridy = 4;
+		main_c.add(btnInfo, gbc_btnInfo);
+		
+		JButton button_1 = new JButton("Info");
+		GridBagConstraints gbc_button_1 = new GridBagConstraints();
+		gbc_button_1.insets = new Insets(0, 0, 5, 5);
+		gbc_button_1.gridx = 6;
+		gbc_button_1.gridy = 4;
+		main_c.add(button_1, gbc_button_1);
+		
+		JButton button_3 = new JButton("Info");
+		GridBagConstraints gbc_button_3 = new GridBagConstraints();
+		gbc_button_3.insets = new Insets(0, 0, 5, 5);
+		gbc_button_3.gridx = 10;
+		gbc_button_3.gridy = 4;
+		main_c.add(button_3, gbc_button_3);
+		
+		JButton button_5 = new JButton("Info");
+		GridBagConstraints gbc_button_5 = new GridBagConstraints();
+		gbc_button_5.insets = new Insets(0, 0, 5, 5);
+		gbc_button_5.gridx = 13;
+		gbc_button_5.gridy = 4;
+		main_c.add(button_5, gbc_button_5);
+		
+		JLabel label = new JLabel("");
+		GridBagConstraints gbc_label = new GridBagConstraints();
+		gbc_label.gridx = 18;
+		gbc_label.gridy = 10;
+		main_c.add(label, gbc_label);
+		
+		JPanel panel = new JPanel();
+		contentPane.add(panel, BorderLayout.WEST);
 		
 		JPanel panel_1 = new JPanel();
-		contentPane.add(panel_1, BorderLayout.WEST);
+		contentPane.add(panel_1, BorderLayout.NORTH);
 		
 		JPanel panel_2 = new JPanel();
-		contentPane.add(panel_2, BorderLayout.SOUTH);
+		contentPane.add(panel_2, BorderLayout.EAST);
 		
 		JPanel panel_3 = new JPanel();
-		contentPane.add(panel_3, BorderLayout.EAST);
-		
-		JPanel panel_4 = new JPanel();
-		contentPane.add(panel_4, BorderLayout.NORTH);
+		contentPane.add(panel_3, BorderLayout.SOUTH);
 	}
 
 }
