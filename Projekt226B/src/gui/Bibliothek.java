@@ -155,7 +155,7 @@ public class Bibliothek extends JFrame {
 		gbc_button_1.gridy = 4;
 		main_c.add(button_1, gbc_button_1);
 		
-		JButton button_3 = new JButton("Details"); 
+		JButton button_3 = new JButton("Details");
 		GridBagConstraints gbc_button_3 = new GridBagConstraints();
 		gbc_button_3.insets = new Insets(0, 0, 5, 5);
 		gbc_button_3.gridx = 10;
