@@ -42,6 +42,7 @@ public class Bibliothek extends JFrame {
 	 * Create the frame.
 	 */
 	public Bibliothek() {
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 633, 440);
 		contentPane = new JPanel();
@@ -140,28 +141,28 @@ public class Bibliothek extends JFrame {
 		gbc_btnStart_3.gridy = 3;
 		main_c.add(btnStart_3, gbc_btnStart_3);
 		
-		JButton btnInfo = new JButton("Info");
-		GridBagConstraints gbc_btnInfo = new GridBagConstraints();
-		gbc_btnInfo.insets = new Insets(0, 0, 5, 5);
-		gbc_btnInfo.gridx = 2;
-		gbc_btnInfo.gridy = 4;
-		main_c.add(btnInfo, gbc_btnInfo);
+		JButton btnDetails = new JButton("Details");
+		GridBagConstraints gbc_btnDetails = new GridBagConstraints();
+		gbc_btnDetails.insets = new Insets(0, 0, 5, 5);
+		gbc_btnDetails.gridx = 2;
+		gbc_btnDetails.gridy = 4;
+		main_c.add(btnDetails, gbc_btnDetails);
 		
-		JButton button_1 = new JButton("Info");
+		JButton button_1 = new JButton("Details");
 		GridBagConstraints gbc_button_1 = new GridBagConstraints();
 		gbc_button_1.insets = new Insets(0, 0, 5, 5);
 		gbc_button_1.gridx = 6;
 		gbc_button_1.gridy = 4;
 		main_c.add(button_1, gbc_button_1);
 		
-		JButton button_3 = new JButton("Info");
+		JButton button_3 = new JButton("Details");
 		GridBagConstraints gbc_button_3 = new GridBagConstraints();
 		gbc_button_3.insets = new Insets(0, 0, 5, 5);
 		gbc_button_3.gridx = 10;
 		gbc_button_3.gridy = 4;
 		main_c.add(button_3, gbc_button_3);
 		
-		JButton button_5 = new JButton("Info");
+		JButton button_5 = new JButton("Details");
 		GridBagConstraints gbc_button_5 = new GridBagConstraints();
 		gbc_button_5.insets = new Insets(0, 0, 5, 5);
 		gbc_button_5.gridx = 13;
