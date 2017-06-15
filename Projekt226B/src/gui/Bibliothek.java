@@ -21,6 +21,8 @@ import java.awt.GridBagConstraints;
 import java.awt.Insets;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.awt.event.ActionEvent;
 import java.awt.FlowLayout;
 
@@ -31,8 +33,7 @@ public class Bibliothek extends JFrame implements ActionListener {
 
 	startGames sg = new startGames();
 	ArrayList<Game> ag = sg.getAllGames();
-
-	GamePanel gp;
+	GamePanel g1, g2, g3, g4;
 
 	/**
 	 * Launch the application.
@@ -92,18 +93,25 @@ public class Bibliothek extends JFrame implements ActionListener {
 		JPanel panel_3 = new JPanel();
 		contentPane.add(panel_3, BorderLayout.SOUTH);
 
-		for (Game g : ag) {
-			gp = new GamePanel(g);
-			panel_4.add(gp);
-		}
+		g1 = new GamePanel(ag.get(0));
+		g2 = new GamePanel(ag.get(1));
+		g3 = new GamePanel(ag.get(2));
+		g4 = new GamePanel(ag.get(3));
 
-		gp.start.addActionListener(this);
+		panel_4.add(g1);
+		panel_4.add(g2);
+		panel_4.add(g3);
+		panel_4.add(g4);
 
+		g1.start.addActionListener(this);
+		g2.start.addActionListener(this);
+		g3.start.addActionListener(this);
+		g4.start.addActionListener(this);
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if (e.getSource() == gp.start) {
+		if (e.getSource() == g1.start) {
 
 			try {
 				sg.startGame(ag.get(0));
@@ -111,7 +119,7 @@ public class Bibliothek extends JFrame implements ActionListener {
 				e1.printStackTrace();
 			}
 		}
-		if (e.getSource() == gp.start) {
+		if (e.getSource() == g2.start) {
 
 			try {
 				sg.startGame(ag.get(1));
@@ -119,6 +127,23 @@ public class Bibliothek extends JFrame implements ActionListener {
 				e1.printStackTrace();
 			}
 		}
+		if (e.getSource() == g3.start) {
+
+			try {
+				sg.startGame(ag.get(2));
+			} catch (Exception e1) {
+				e1.printStackTrace();
+			}
+		}
+		if (e.getSource() == g4.start) {
+
+			try {
+				sg.startGame(ag.get(3));
+			} catch (Exception e1) {
+				e1.printStackTrace();
+			}
+		}
+
 	}
 
 }

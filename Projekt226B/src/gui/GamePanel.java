@@ -32,5 +32,4 @@ public class GamePanel extends JPanel {
 		this.add(bez);
 		this.setBorder(new EmptyBorder(10, 10, 10, 10));
 	}
-
 }
