@@ -20,15 +20,21 @@ public class startGames {
 
 	}
 
-	public String getBeschreibung(Game starterGame) {
+	public String getTitel(Game starterGame) {
 
 		String titel = starterGame.getTitel();
+
+		return titel;
+	}
+
+	public String getInfo(Game starterGame) {
+
 		String genre = starterGame.getGenre();
 		String publisher = starterGame.getPublisher();
 		String altersfreigabe = Integer.toString(starterGame.getAltersfreigabe());
 		String beschreibung = starterGame.getBeschreibung();
 
-		String info = titel + "," + genre + "," + publisher + "," + altersfreigabe + "," + beschreibung;
+		String info = genre + " " + publisher + " " + altersfreigabe + " " + beschreibung;
 
 		return info;
 	}

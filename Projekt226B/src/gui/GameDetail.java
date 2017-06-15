@@ -20,7 +20,7 @@ public class GameDetail extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					GameDetail frame = new GameDetail();
+					GameDetail frame = new GameDetail("", "");
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -29,7 +29,7 @@ public class GameDetail extends JFrame {
 		});
 	}
 
-	public GameDetail() {
+	public GameDetail(String titel, String info) {
 		setBounds(100, 100, 633, 440);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -44,7 +44,7 @@ public class GameDetail extends JFrame {
 		main.add(main_n, BorderLayout.NORTH);
 		main_n.setLayout(new GridLayout(1, 0, 0, 0));
 
-		JLabel lblGame = new JLabel("Game Titel");
+		JLabel lblGame = new JLabel(titel);
 		lblGame.setFont(new Font("Tahoma", Font.PLAIN, 32));
 		main_n.add(lblGame);
 
@@ -67,9 +67,9 @@ public class GameDetail extends JFrame {
 		main.add(main_c, BorderLayout.CENTER);
 		main_c.setLayout(new BorderLayout(0, 0));
 
-		JLabel Beschreibung = new JLabel("Beschreibung");
+		JLabel Beschreibung = new JLabel(info);
 		Beschreibung.setHorizontalAlignment(SwingConstants.CENTER);
-		Beschreibung.setFont(new Font("Tahoma", Font.PLAIN, 60));
+		Beschreibung.setFont(new Font("Tahoma", Font.PLAIN, 30));
 		main_c.add(Beschreibung);
 
 		JLabel lblNewLabel_3 = new JLabel(" ");

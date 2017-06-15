@@ -107,7 +107,7 @@ public class Bibliothek extends JFrame implements ActionListener {
 		g2.start.addActionListener(this);
 		g3.start.addActionListener(this);
 		g4.start.addActionListener(this);
-		
+
 		g1.bez.addActionListener(this);
 		g2.bez.addActionListener(this);
 		g3.bez.addActionListener(this);
@@ -152,22 +152,23 @@ public class Bibliothek extends JFrame implements ActionListener {
 		// ----------------------------------------------------------------------------------------------------------------------------------
 
 		if (e.getSource() == g1.bez) {
-			
-			GameDetail gd = new GameDetail();
-			//sg.getBeschreibung(ag.get(0));
 
+			GameDetail gd = new GameDetail(sg.getTitel(ag.get(0)), sg.getInfo(ag.get(0)));
 
 		}
 		if (e.getSource() == g2.bez) {
 
+			GameDetail gd = new GameDetail(sg.getTitel(ag.get(1)), sg.getInfo(ag.get(1)));
 
 		}
 		if (e.getSource() == g3.bez) {
 
+			GameDetail gd = new GameDetail(sg.getTitel(ag.get(2)), sg.getInfo(ag.get(2)));
 
 		}
 		if (e.getSource() == g4.bez) {
 
+			GameDetail gd = new GameDetail(sg.getTitel(ag.get(3)), sg.getInfo(ag.get(3)));
 
 		}
 	}

@@ -17,7 +17,7 @@ public class GamePanel extends JPanel {
 
 	protected JButton start = new JButton("Start");
 	protected JButton bez = new JButton("Beschreibung");
-
+	
 	private Game g;
 
 	public GamePanel(Game g) {
