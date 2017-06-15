@@ -9,8 +9,9 @@ public class GamesData implements GamesDAO {
 
 	@Override
 	public ArrayList<Game> list() {
+
 		Game g1 = new Game("Agar.io", "Genre: Multiplayer-Spiel", "Publisher: Miniclip", 3,
-				"Agar.io ist ein kostenloses Multiplayer-Spiel. Es wurde von dem Reddit-Nutzer Zeach entwickelt. Der Name des Spiels wurde dem Galactose-Polymer Agar entlehnt. ,Bei Agar.io muss der Spieler eine Zelle steuern, die dadurch wächst, dass sie andere Zellen frisst. Sie darf dabei jedoch nicht selbst von größeren Zellen gefressen werden, da sonst das laufende Spiel verloren wird.",
+				"Agar.io ist ein kostenloses Multiplayer-Spiel. Es wurde von dem Reddit-Nutzer Zeach entwickelt. Der Name des Spiels wurde dem Galactose-Polymer Agar entlehnt. Bei Agar.io muss der Spieler eine Zelle steuern, die dadurch wächst, dass sie andere Zellen frisst. Sie darf dabei jedoch nicht selbst von größeren Zellen gefressen werden, da sonst das laufende Spiel verloren wird.",
 				"http://agar.io/", true);
 		gameData.add(g1);
 

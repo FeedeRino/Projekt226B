@@ -9,6 +9,8 @@ import java.awt.GridLayout;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
@@ -67,10 +69,17 @@ public class GameDetail extends JFrame {
 		main.add(main_c, BorderLayout.CENTER);
 		main_c.setLayout(new BorderLayout(0, 0));
 
-		JLabel Beschreibung = new JLabel(info);
-		Beschreibung.setHorizontalAlignment(SwingConstants.CENTER);
-		Beschreibung.setFont(new Font("Tahoma", Font.PLAIN, 30));
-		main_c.add(Beschreibung);
+//		JLabel Beschreibung = new JLabel(info);
+//		Beschreibung.setHorizontalAlignment(SwingConstants.CENTER);
+//		Beschreibung.setFont(new Font("Tahoma", Font.PLAIN, 30));
+//		main_c.add(Beschreibung);
+		
+		JTextArea tA = new JTextArea(info);
+		tA.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		tA.setLineWrap(true);
+		tA.setWrapStyleWord(true);
+		tA.setEditable(false);
+		main_c.add(tA);
 
 		JLabel lblNewLabel_3 = new JLabel(" ");
 		main_c.add(lblNewLabel_3, BorderLayout.NORTH);
