@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import data.GamesDAO;
 import dto.Game;
 
-public class startGames {
+public class startGames  {
 	
 	private GamesDAO dataGames;
 	
@@ -13,11 +13,12 @@ public class startGames {
 		
 		if(starterGame.getStartauswahl() == true) {
 			
-		}			
+		}		
 	}
-	private ArrayList<Integer> getAllGames(){
+	
+	private ArrayList<Integer> getAllGames(ArrayList<Game> list){
 		
-		return AllGames;
+		return list;
 	}
 	
 
