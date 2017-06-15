@@ -23,6 +23,7 @@ public class startGames {
 	public ArrayList<Game> getAllGames() {
 		ArrayList<Game> AllGames = dataGames.list();
 		return AllGames;
+		
 	}
 
 }
