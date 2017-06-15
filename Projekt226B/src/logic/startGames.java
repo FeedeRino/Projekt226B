@@ -20,11 +20,6 @@ public class startGames {
 		}
 
 	}
-	
-	private ArrayList<Integer> getAllGames(ArrayList<Game> list){
-		
-		return list;
-	}
 
 	public ArrayList<Game> getAllGames() {
 		ArrayList<Game> AllGames = dataGames.list();
