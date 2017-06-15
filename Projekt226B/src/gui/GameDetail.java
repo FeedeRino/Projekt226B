@@ -84,15 +84,6 @@ public class GameDetail extends JFrame {
 		tA.setEditable(false);
 		main_c.add(scrollPane);
 		
-		
-		
-
-		
-		
-		
-		
-		
-
 		JLabel lblNewLabel_3 = new JLabel(" ");
 		main_c.add(lblNewLabel_3, BorderLayout.NORTH);
 
