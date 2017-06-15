@@ -10,6 +10,18 @@ public class Game {
 	private String Pfad;
 	private boolean Startauswahl;
 
+	public Game(String titel, String genre, String publisher, int altersfreigabe, String beschreibung, String pfad,
+			boolean startauswahl) {
+		super();
+		Titel = titel;
+		Genre = genre;
+		Publisher = publisher;
+		Altersfreigabe = altersfreigabe;
+		Beschreibung = beschreibung;
+		Pfad = pfad;
+		Startauswahl = startauswahl;
+	}
+
 	public String getTitel() {
 		return Titel;
 	}

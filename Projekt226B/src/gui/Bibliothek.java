@@ -6,15 +6,33 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import dto.Game;
+import logic.startGames;
+
 import java.awt.GridLayout;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.SwingConstants;
 import java.awt.Color;
+import javax.swing.JButton;
+import java.awt.GridBagLayout;
+import java.awt.GridBagConstraints;
+import java.awt.Insets;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.awt.event.ActionEvent;
+import java.awt.FlowLayout;
 
-public class Bibliothek extends JFrame {
+public class Bibliothek extends JFrame implements ActionListener {
 
 	private JPanel contentPane;
+	JButton button_3;
+
+	startGames sg = new startGames();
+	ArrayList<Game> ag = sg.getAllGames();
+
+	GamePanel gp;
 
 	/**
 	 * Launch the application.
@@ -36,72 +54,71 @@ public class Bibliothek extends JFrame {
 	 * Create the frame.
 	 */
 	public Bibliothek() {
+
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 633, 440);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(new BorderLayout(0, 0));
-		
+
 		JPanel main = new JPanel();
 		contentPane.add(main, BorderLayout.CENTER);
 		main.setLayout(new BorderLayout(0, 0));
-		
+
 		JPanel main_n = new JPanel();
 		main.add(main_n, BorderLayout.NORTH);
 		main_n.setLayout(new GridLayout(1, 0, 0, 0));
-		
-		JLabel lblGame = new JLabel("Game Titel");
+
+		JLabel lblGame = new JLabel("Bibliothek");
 		lblGame.setFont(new Font("Tahoma", Font.PLAIN, 32));
 		main_n.add(lblGame);
-		
-		JPanel main_w = new JPanel();
-		main.add(main_w, BorderLayout.WEST);
-		main_w.setLayout(new GridLayout(0, 1, 0, 0));
-		
-		JLabel lblNewLabel = new JLabel("                                         ");
-		main_w.add(lblNewLabel);
-		
-		JLabel lblNewLabel_1 = new JLabel("");
-		lblNewLabel_1.setBackground(new Color(240, 240, 240));
-		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 30));
-		main_w.add(lblNewLabel_1);
-		
-		JLabel lblNewLabel_2 = new JLabel("");
-		main_w.add(lblNewLabel_2);
-		
-		JPanel main_c = new JPanel();
-		main.add(main_c, BorderLayout.CENTER);
-		main_c.setLayout(new BorderLayout(0, 0));
-		
-		JLabel Beschreibung = new JLabel("Beschreibung");
-		Beschreibung.setHorizontalAlignment(SwingConstants.CENTER);
-		Beschreibung.setFont(new Font("Tahoma", Font.PLAIN, 60));
-		main_c.add(Beschreibung);
-		
-		JLabel lblNewLabel_3 = new JLabel(" ");
-		main_c.add(lblNewLabel_3, BorderLayout.NORTH);
-		
-		JLabel lblNewLabel_4 = new JLabel("    ");
-		main_c.add(lblNewLabel_4, BorderLayout.WEST);
-		
-		JLabel lblNewLabel_5 = new JLabel("    ");
-		main_c.add(lblNewLabel_5, BorderLayout.EAST);
-		
-		JLabel lblNewLabel_6 = new JLabel("    ");
-		main_c.add(lblNewLabel_6, BorderLayout.SOUTH);
-		
-		JPanel panel_1 = new JPanel();
-		contentPane.add(panel_1, BorderLayout.WEST);
-		
-		JPanel panel_2 = new JPanel();
-		contentPane.add(panel_2, BorderLayout.SOUTH);
-		
-		JPanel panel_3 = new JPanel();
-		contentPane.add(panel_3, BorderLayout.EAST);
-		
+
 		JPanel panel_4 = new JPanel();
-		contentPane.add(panel_4, BorderLayout.NORTH);
+		main.add(panel_4, BorderLayout.CENTER);
+		panel_4.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
+
+		button_3 = new JButton("Details");
+
+		JPanel panel = new JPanel();
+		contentPane.add(panel, BorderLayout.WEST);
+
+		JPanel panel_1 = new JPanel();
+		contentPane.add(panel_1, BorderLayout.NORTH);
+
+		JPanel panel_2 = new JPanel();
+		contentPane.add(panel_2, BorderLayout.EAST);
+
+		JPanel panel_3 = new JPanel();
+		contentPane.add(panel_3, BorderLayout.SOUTH);
+
+		for (Game g : ag) {
+			gp = new GamePanel(g);
+			panel_4.add(gp);
+		}
+
+		gp.start.addActionListener(this);
+
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == gp.start) {
+
+			try {
+				sg.startGame(ag.get(0));
+			} catch (Exception e1) {
+				e1.printStackTrace();
+			}
+		}
+		if (e.getSource() == gp.start) {
+
+			try {
+				sg.startGame(ag.get(1));
+			} catch (Exception e1) {
+				e1.printStackTrace();
+			}
+		}
 	}
 
 }

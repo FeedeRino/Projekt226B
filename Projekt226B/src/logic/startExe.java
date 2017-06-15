@@ -1,5 +1,6 @@
 package logic;
 
+
 import dto.Game;
 
 public class startExe extends Starter {
@@ -7,7 +8,10 @@ public class startExe extends Starter {
 	protected startExe(Game game) throws Exception {
 		super(game);
 		
-		Process process = new ProcessBuilder(game.getPfad()).start();
+		ProcessBuilder p = new ProcessBuilder();
+		p.command(game.getPfad());
+		p.start();
+		
 	}
 
 }
