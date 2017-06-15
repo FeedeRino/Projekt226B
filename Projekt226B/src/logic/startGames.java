@@ -20,6 +20,19 @@ public class startGames {
 
 	}
 
+	public String getBeschreibung(Game starterGame) {
+
+		String titel = starterGame.getTitel();
+		String genre = starterGame.getGenre();
+		String publisher = starterGame.getPublisher();
+		String altersfreigabe = Integer.toString(starterGame.getAltersfreigabe());
+		String beschreibung = starterGame.getBeschreibung();
+
+		String info = titel + "," + genre + "," + publisher + "," + altersfreigabe + "," + beschreibung;
+
+		return info;
+	}
+
 	public ArrayList<Game> getAllGames() {
 		ArrayList<Game> AllGames = dataGames.list();
 
