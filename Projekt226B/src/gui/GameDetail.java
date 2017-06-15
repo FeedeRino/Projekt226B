@@ -69,12 +69,13 @@ public class GameDetail extends JFrame {
 		main.add(main_c, BorderLayout.CENTER);
 		main_c.setLayout(new BorderLayout(0, 0));
 
-//		JLabel Beschreibung = new JLabel(info);
-//		Beschreibung.setHorizontalAlignment(SwingConstants.CENTER);
-//		Beschreibung.setFont(new Font("Tahoma", Font.PLAIN, 30));
-//		main_c.add(Beschreibung);
-		
+		// JLabel Beschreibung = new JLabel(info);
+		// Beschreibung.setHorizontalAlignment(SwingConstants.CENTER);
+		// Beschreibung.setFont(new Font("Tahoma", Font.PLAIN, 30));
+		// main_c.add(Beschreibung);
+
 		JTextArea tA = new JTextArea(info);
+		JScrollPane scrollPane = new JScrollPane(tA);
 		tA.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		tA.setLineWrap(true);
 		tA.setWrapStyleWord(true);

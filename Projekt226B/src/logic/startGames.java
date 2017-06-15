@@ -34,7 +34,7 @@ public class startGames {
 		String altersfreigabe = Integer.toString(starterGame.getAltersfreigabe());
 		String beschreibung = starterGame.getBeschreibung();
 
-		String info = genre + "\n" + publisher + "\n" + altersfreigabe + "\n" + beschreibung;
+		String info = genre + "\n" + publisher + "\nPEGI: " + altersfreigabe + "\nBeschreibung: " + beschreibung;
 
 		return info;
 	}
