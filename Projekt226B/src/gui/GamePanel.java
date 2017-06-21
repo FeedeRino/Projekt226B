@@ -1,9 +1,7 @@
 package gui;
 
-import java.awt.Color;
 import java.awt.GridLayout;
 
-import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -17,7 +15,7 @@ public class GamePanel extends JPanel {
 
 	protected JButton start = new JButton("Start");
 	protected JButton bez = new JButton("Beschreibung");
-	
+
 	private Game g;
 
 	public GamePanel(Game g) {
