@@ -1,5 +1,8 @@
 package dto;
 
+
+//Diese Klasse ist das Herzstück der Daten ier wird deklariert, was ein Spiel haben muss
+
 public class Game {
 
 	private String Titel;
@@ -10,6 +13,9 @@ public class Game {
 	private String Pfad;
 	private boolean Startauswahl;
 
+	
+	//Im Konstruktor wird gesagt, welche Daten dieser braucht um ein Objekt vom Typ Game zu erstellen
+	
 	public Game(String titel, String genre, String publisher, int altersfreigabe, String beschreibung, String pfad,
 			boolean startauswahl) {
 		super();

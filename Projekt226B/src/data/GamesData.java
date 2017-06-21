@@ -4,8 +4,13 @@ import java.util.ArrayList;
 
 import dto.Game;
 
+//Diese Klasse enthält die Daten der einzelnen Game Objekte
+
 public class GamesData implements GamesDAO {
 	ArrayList<Game> gameData = new ArrayList<Game>();
+	
+	
+	// Im Konstruktor werden die einzelnen Spiele und ihre Daten erstellt und in eine ArrayList gespeichert
 	
 	public GamesData() {
 			Game g1 = new Game("Agar.io", "Genre: Multiplayer-Spiel", "Publisher: Miniclip", 3,
@@ -28,7 +33,10 @@ public class GamesData implements GamesDAO {
 					"C:\\Program Files\\Microsoft Games\\Mahjong\\mahjong.exe", false);
 			this.gameData.add(g4);
 	}
-			
+	
+	
+	//Mit dieser Methode wird die ArrayList der Spiele zurueckgegeben
+	
 	@Override
 	public ArrayList<Game> list() {
 

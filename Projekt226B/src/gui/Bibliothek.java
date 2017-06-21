@@ -26,6 +26,9 @@ import java.util.Map;
 import java.awt.event.ActionEvent;
 import java.awt.FlowLayout;
 
+
+//Diese Klasse ist das Haupt gui von dem aus alles andere dargestellt wird
+
 public class Bibliothek extends JFrame implements ActionListener {
 
 	private JPanel contentPane;
@@ -35,9 +38,9 @@ public class Bibliothek extends JFrame implements ActionListener {
 	ArrayList<Game> ag = sg.getAllGames();
 	GamePanel g1, g2, g3, g4;
 
-	/**
-	 * Launch the application.
-	 */
+	
+	//Startet das gui
+	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -51,9 +54,9 @@ public class Bibliothek extends JFrame implements ActionListener {
 		});
 	}
 
-	/**
-	 * Create the frame.
-	 */
+	
+	//erstellt das gui
+	
 	public Bibliothek() {
 
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -114,6 +117,9 @@ public class Bibliothek extends JFrame implements ActionListener {
 		g4.bez.addActionListener(this);
 	}
 
+	
+	//ueberprueft ob buttons geklickt werden und fuehrt dem entsprechend aktionen aus
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == g1.start) {
