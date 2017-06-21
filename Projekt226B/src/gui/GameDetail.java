@@ -15,10 +15,16 @@ import javax.swing.ScrollPaneConstants;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
+
+//Hier werden die einzelnen Details der Spiele angezeigt
+
 public class GameDetail extends JFrame {
 
 	private JPanel contentPane;
 
+	
+	//führt das gui aus
+	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -32,6 +38,9 @@ public class GameDetail extends JFrame {
 		});
 	}
 
+	
+	//stellt das gui dar
+	
 	public GameDetail(String titel, String info) {
 		setBounds(100, 100, 633, 440);
 		contentPane = new JPanel();
@@ -69,11 +78,6 @@ public class GameDetail extends JFrame {
 		JPanel main_c = new JPanel();
 		main.add(main_c, BorderLayout.CENTER);
 		main_c.setLayout(new BorderLayout(0, 0));
-
-		// JLabel Beschreibung = new JLabel(info);
-		// Beschreibung.setHorizontalAlignment(SwingConstants.CENTER);
-		// Beschreibung.setFont(new Font("Tahoma", Font.PLAIN, 30));
-		// main_c.add(Beschreibung);
 
 		JTextArea tA = new JTextArea(info);
 		JScrollPane scrollPane = new JScrollPane(tA);

@@ -9,6 +9,9 @@ import javax.swing.border.EmptyBorder;
 
 import dto.Game;
 
+
+//JPanel auf dem die Spiele dargestellt werden
+
 public class GamePanel extends JPanel {
 
 	private JLabel titel = new JLabel();
@@ -18,6 +21,9 @@ public class GamePanel extends JPanel {
 
 	private Game g;
 
+	
+	//stellt die Spiele mit Titel und Butons dar
+	
 	public GamePanel(Game g) {
 
 		this.g = g;
