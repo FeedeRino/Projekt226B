@@ -9,8 +9,11 @@ import javax.swing.border.EmptyBorder;
 
 import dto.Game;
 
-
-//JPanel auf dem die Spiele dargestellt werden
+/**
+ * JPanel auf dem die Spiele dargestellt werden 
+ * @author Jannick Mueller
+ *
+ */
 
 public class GamePanel extends JPanel {
 
@@ -21,9 +24,11 @@ public class GamePanel extends JPanel {
 
 	private Game g;
 
-	
-	//stellt die Spiele mit Titel und Butons dar
-	
+	/** 
+	 * stellt die Spiele mit Titel und Butons dar 
+	 * @param g
+	 */
+
 	public GamePanel(Game g) {
 
 		this.g = g;

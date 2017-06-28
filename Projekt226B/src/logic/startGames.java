@@ -6,10 +6,22 @@ import data.GamesDAO;
 import data.GamesData;
 import dto.Game;
 
+/**
+ * 
+ * @author Noah Hermann
+ * In dieser Klasse wird entschieden welche Art von Spiel gestartet werden muss
+ */
+
 public class startGames {
 
 	private GamesDAO dataGames = new GamesData();
 
+	/** 
+	 * 
+	 * @param starterGame Game Objekt welches zur identifikation der Art des Spiels verwendet wird
+	 * Diese Methode bestimmt anhand von einem definierten Wert, um was fuer ein Spiel es sich handelt
+	 */
+	
 	public void startGame(Game starterGame) throws Exception {
 
 		if (starterGame.getStartauswahl() == true) {

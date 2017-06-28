@@ -15,16 +15,21 @@ import javax.swing.ScrollPaneConstants;
 import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
-
-//Hier werden die einzelnen Details der Spiele angezeigt
+/** 
+ * Hier werden die einzelnen Details der Spiele angezeigt 
+ * @author Jannick Mueller
+ *
+ */
 
 public class GameDetail extends JFrame {
 
 	private JPanel contentPane;
 
-	
-	//führt das gui aus
-	
+	/**
+	 * führt das gui aus 
+	 * @param args
+	 */
+
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -38,9 +43,8 @@ public class GameDetail extends JFrame {
 		});
 	}
 
-	
-	//stellt das gui dar
-	
+	/** stellt das gui dar */
+
 	public GameDetail(String titel, String info) {
 		setBounds(100, 100, 633, 440);
 		contentPane = new JPanel();
@@ -87,7 +91,7 @@ public class GameDetail extends JFrame {
 		tA.setWrapStyleWord(true);
 		tA.setEditable(false);
 		main_c.add(scrollPane);
-		
+
 		JLabel lblNewLabel_3 = new JLabel(" ");
 		main_c.add(lblNewLabel_3, BorderLayout.NORTH);
 
